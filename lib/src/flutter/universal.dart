@@ -656,9 +656,9 @@ class VxUniversal extends StatelessWidget {
     if (heroTag != null) {
       current = heroWidget(current);
     }
-    if (addCard) {
-      current = cardWidget(current, context);
-    }
+    // if (addCard) {
+    //   current = cardWidget(current, context);
+    // }
     if (isCircleAvatar) {
       current = circleAvatarWidget(current);
     }
@@ -800,25 +800,25 @@ class VxUniversal extends StatelessWidget {
       fit: expanded ? FlexFit.tight : FlexFit.loose,
       child: current);
 
-  Widget cardWidget(Widget current, BuildContext context) {
-   // final ThemeData theme = Theme.of(context);
- // final CardTheme cardTheme = CardTheme.of(context);
-    final CardThemeData cardTheme = CardTheme.of(context);
+ //  Widget cardWidget(Widget current, BuildContext context) {
+ //   // final ThemeData theme = Theme.of(context);
+ // // final CardTheme cardTheme = CardTheme.of(context);
+ //    final CardThemeData cardTheme = CardTheme.of(context);
 
-    return material(current,
-        mType: MaterialType.card,
-        mShadowColor: shadowColor ?? cardTheme.shadowColor ?? theme.shadowColor,
-        mColor: color ?? cardTheme.color ?? theme.cardColor,
-        mElevation: elevation ?? cardTheme.elevation ?? 10,
-        mShape: shape ??
-            cardTheme.shape ??
-            RoundedRectangleBorder(
-                borderRadius: borderRadius == BorderRadius.zero
-                    ? BorderRadius.circular(4)
-                    : borderRadius),
-        mClipBehavior: clipBehavior ?? cardTheme.clipBehavior ?? Clip.none,
-        mBorderOnForeground: true);
-  }
+ //    return material(current,
+ //        mType: MaterialType.card,
+ //        mShadowColor: shadowColor ?? cardTheme.shadowColor ?? theme.shadowColor,
+ //        mColor: color ?? cardTheme.color ?? theme.cardColor,
+ //        mElevation: elevation ?? cardTheme.elevation ?? 10,
+ //        mShape: shape ??
+ //            cardTheme.shape ??
+ //            RoundedRectangleBorder(
+ //                borderRadius: borderRadius == BorderRadius.zero
+ //                    ? BorderRadius.circular(4)
+ //                    : borderRadius),
+ //        mClipBehavior: clipBehavior ?? cardTheme.clipBehavior ?? Clip.none,
+ //        mBorderOnForeground: true);
+ //  }
 
   Material material(Widget current,
           {required MaterialType mType,
